@@ -1,0 +1,1620 @@
+<!-- #file: websites-premium.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站收录 - 计算机协会</title>
+    <link rel="stylesheet" href="../CSS/web.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+
+<!-- 顶部导航栏 -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <h2>计算机协会</h2>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="Navigate.html" class="nav-link">首页</a>
+            </li>
+            <li class="nav-item">
+                <a href="../DOC/DOC-HTML/Main.html" class="nav-link" target="_blank">本站使用手册</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://sr.mihoyo.com/cloud/#/" class="nav-link" target="_blank">技术培训</a>
+            </li>
+            <li class="nav-item">
+                <a href="../HTML/News.html" class="nav-link" target="_blank">活动资讯</a>
+            </li>
+            <li class="nav-item">
+                <a href="../HTML/info.html" class="nav-link" target="_blank">联系我们</a>
+            </li>
+        </ul>
+        <!-- 天气组件 -->
+        <div class="weather-widget" id="weatherWidget">
+            <div class="weather-info">
+                <span class="weather-main">
+                    <span class="weather-icon">☀️</span>
+                    <span class="weather-temp" id="weatherTemp">25°</span>
+                    <span class="weather-city" id="weatherCity">北京</span>
+                </span>
+                <span class="weather-tip" id="weatherTip">今日天气晴朗，适合户外活动</span>
+            </div>
+        </div>
+        <!-- 移动端菜单按钮 -->
+        <div class="nav-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+
+    <!-- 页面容器 -->
+    <div class="page-container">
+        <!-- 侧边栏导航 -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-header">
+                    <h3>网站导航</h3>
+                </div>
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="#programming" class="sidebar-link">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>编程学习</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tools" class="sidebar-link">
+                            <i class="fas fa-tools"></i>
+                            <span>开发工具</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#design" class="sidebar-link">
+                            <i class="fas fa-palette"></i>
+                            <span>设计资源</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#communities" class="sidebar-link">
+                            <i class="fas fa-users"></i>
+                            <span>技术社区</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#documentation" class="sidebar-link">
+                            <i class="fas fa-book"></i>
+                            <span>技术文档</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tutorials" class="sidebar-link">
+                            <i class="fas fa-video"></i>
+                            <span>视频教程</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="sidebar-divider"></div>
+                
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="#new-sites" class="sidebar-link">
+                            <i class="fas fa-star"></i>
+                            <span>新增网站</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#popular-sites" class="sidebar-link">
+                            <i class="fas fa-fire"></i>
+                            <span>热门网站</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#recommended" class="sidebar-link">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>推荐网站</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="sidebar-footer">
+                    <div class="sidebar-social">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- 页面标题 -->
+                <header class="websites-header">
+                    <div class="header-overlay"></div>
+                    <div class="header-content">
+                        <h1>优质网站收录</h1>
+                        <p>我们精心整理和收录了各类优质网站资源，按分类展示，方便大家学习和使用</p>
+                        <div class="header-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">80+</span>
+                                <span class="stat-label">收录网站</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">6</span>
+                                <span class="stat-label">分类</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">免费</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- 大纲目录 -->
+                <section class="toc-section">
+                    <div class="toc-container">
+                        <h2><i class="fas fa-list"></i> 目录导航</h2>
+                        <div class="toc-grid">
+                            <a href="#programming" class="toc-item">
+                                <div class="toc-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h3>编程学习</h3>
+                                <p>算法练习、在线课程、编程教程</p>
+                            </a>
+                            <a href="#tools" class="toc-item">
+                                <div class="toc-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h3>开发工具</h3>
+                                <p>代码托管、在线编辑器、API文档</p>
+                            </a>
+                            <a href="#design" class="toc-item">
+                                <div class="toc-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <h3>设计资源</h3>
+                                <p>图标库、字体、配色工具</p>
+                            </a>
+                            <a href="#communities" class="toc-item">
+                                <div class="toc-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>技术社区</h3>
+                                <p>问答平台、技术博客、开发者社区</p>
+                            </a>
+                            <a href="#documentation" class="toc-item">
+                                <div class="toc-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <h3>技术文档</h3>
+                                <p>官方文档、API参考、技术规范</p>
+                            </a>
+                            <a href="#tutorials" class="toc-item">
+                                <div class="toc-icon">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <h3>视频教程</h3>
+                                <p>在线课程、技术分享、实战教学</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 编程学习区 -->
+                <section class="websites-section" id="programming">
+                    <div class="section-header">
+                        <h2><i class="fas fa-laptop-code"></i> 编程学习</h2>
+                        <p>提升编程技能的学习资源</p>
+                    </div>
+                    <div class="websites-grid">
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>LeetCode</h3>
+                            <p>全球知名编程练习平台，提升算法能力</p>
+                            <div class="website-meta">
+                                <span class="tag">算法</span>
+                                <span class="tag">面试</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://leetcode.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>慕课网</h3>
+                            <p>程序员的梦工厂，实战课程丰富</p>
+                            <div class="website-meta">
+                                <span class="tag">在线课程</span>
+                                <span class="tag">实战</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.imooc.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>菜鸟教程</h3>
+                            <p>学的不仅是技术更是梦想，入门首选</p>
+                            <div class="website-meta">
+                                <span class="tag">教程</span>
+                                <span class="tag">入门</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.runoob.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <h3>W3Schools</h3>
+                            <p>Web开发权威教程，技术参考手册</p>
+                            <div class="website-meta">
+                                <span class="tag">前端</span>
+                                <span class="tag">参考</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.w3schools.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 添加更多测试网站 -->
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>HackerRank</h3>
+                            <p>编程练习和竞赛平台</p>
+                            <div class="website-meta">
+                                <span class="tag">算法</span>
+                                <span class="tag">竞赛</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.hackerrank.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <h3>Codecademy</h3>
+                            <p>交互式编程学习平台</p>
+                            <div class="website-meta">
+                                <span class="tag">教程</span>
+                                <span class="tag">交互式</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.codecademy.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <h3>freeCodeCamp</h3>
+                            <p>免费编程学习资源</p>
+                            <div class="website-meta">
+                                <span class="tag">开源</span>
+                                <span class="tag">认证</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.freecodecamp.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Code.org</h3>
+                            <p>计算机科学教育普及平台</p>
+                            <div class="website-meta">
+                                <span class="tag">教育</span>
+                                <span class="tag">入门</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://code.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3>Pluralsight</h3>
+                            <p>技术技能培训平台</p>
+                            <div class="website-meta">
+                                <span class="tag">课程</span>
+                                <span class="tag">专业</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.pluralsight.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Codewars</h3>
+                            <p>通过挑战学习编程技能</p>
+                            <div class="website-meta">
+                                <span class="tag">算法</span>
+                                <span class="tag">挑战</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.codewars.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3>GeeksforGeeks</h3>
+                            <p>计算机科学门户和学习资源</p>
+                            <div class="website-meta">
+                                <span class="tag">教程</span>
+                                <span class="tag">面试</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.geeksforgeeks.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h3>The Odin Project</h3>
+                            <p>免费的Web开发课程</p>
+                            <div class="website-meta">
+                                <span class="tag">Web开发</span>
+                                <span class="tag">课程</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.theodinproject.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>edX</h3>
+                            <p>来自世界顶级大学的在线课程</p>
+                            <div class="website-meta">
+                                <span class="tag">大学</span>
+                                <span class="tag">课程</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.edx.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Exercism</h3>
+                            <p>通过练习提升编程技能</p>
+                            <div class="website-meta">
+                                <span class="tag">练习</span>
+                                <span class="tag">导师</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://exercism.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Project Euler</h3>
+                            <p>解决数学和计算机编程问题</p>
+                            <div class="website-meta">
+                                <span class="tag">数学</span>
+                                <span class="tag">算法</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://projecteuler.net" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge programming">编程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>Rosetta Code</h3>
+                            <p>编程任务和解决方案的集合</p>
+                            <div class="website-meta">
+                                <span class="tag">任务</span>
+                                <span class="tag">解决方案</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="http://rosettacode.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 开发工具区 -->
+                <section class="websites-section" id="tools">
+                    <div class="section-header">
+                        <h2><i class="fas fa-tools"></i> 开发工具</h2>
+                        <p>提高开发效率的实用工具</p>
+                    </div>
+                    <div class="websites-grid">
+                        <div class="website-card">
+                            <div class="card-badge tools">工具</div>
+                            <div class="website-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <h3>GitHub</h3>
+                            <p>全球最大的代码托管平台，开源社区</p>
+                            <div class="website-meta">
+                                <span class="tag">代码托管</span>
+                                <span class="tag">开源</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tools">工具</div>
+                            <div class="website-icon">
+                                <i class="fab fa-codepen"></i>
+                            </div>
+                            <h3>CodePen</h3>
+                            <p>前端代码在线编辑器，实时预览</p>
+                            <div class="website-meta">
+                                <span class="tag">在线编辑</span>
+                                <span class="tag">演示</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://codepen.io" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tools">工具</div>
+                            <div class="website-icon">
+                                <i class="fab fa-stack-overflow"></i>
+                            </div>
+                            <h3>Stack Overflow</h3>
+                            <p>程序员问答社区，解决技术难题</p>
+                            <div class="website-meta">
+                                <span class="tag">问答</span>
+                                <span class="tag">社区</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://stackoverflow.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tools">工具</div>
+                            <div class="website-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>MDN Web Docs</h3>
+                            <p>Web技术权威文档，开发者必备</p>
+                            <div class="website-meta">
+                                <span class="tag">文档</span>
+                                <span class="tag">参考</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://developer.mozilla.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 添加更多测试网站 -->
+                        <div class="website-card">
+                            <div class="card-badge tools">工具</div>
+                            <div class="website-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <h3>Netlify</h3>
+                            <p>现代化网站部署平台</p>
+                            <div class="website-meta">
+                                <span class="tag">部署</span>
+                                <span class="tag">静态网站</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.netlify.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tools">工具</div>
+                            <div class="website-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3>Figma</h3>
+                            <p>协作式界面设计工具</p>
+                            <div class="website-meta">
+                                <span class="tag">设计</span>
+                                <span class="tag">协作</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.figma.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tools">工具</div>
+                            <div class="website-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3>Docker Hub</h3>
+                            <p>容器镜像仓库</p>
+                            <div class="website-meta">
+                                <span class="tag">容器</span>
+                                <span class="tag">部署</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://hub.docker.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tools">工具</div>
+                            <div class="website-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>MongoDB Atlas</h3>
+                            <p>云端数据库服务</p>
+                            <div class="website-meta">
+                                <span class="tag">数据库</span>
+                                <span class="tag">云服务</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.mongodb.com/cloud/atlas" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 设计资源区 -->
+                <section class="websites-section" id="design">
+                    <div class="section-header">
+                        <h2><i class="fas fa-palette"></i> 设计资源</h2>
+                        <p>提升设计能力的优质资源</p>
+                    </div>
+                    <div class="websites-grid">
+                        <div class="website-card">
+                            <div class="card-badge design">设计</div>
+                            <div class="website-icon">
+                                <i class="fas fa-images"></i>
+                            </div>
+                            <h3>Unsplash</h3>
+                            <p>高质量免费图片资源，设计必备</p>
+                            <div class="website-meta">
+                                <span class="tag">图片</span>
+                                <span class="tag">免费</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://unsplash.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge design">设计</div>
+                            <div class="website-icon">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <h3>Google Fonts</h3>
+                            <p>免费字体库，丰富字体选择</p>
+                            <div class="website-meta">
+                                <span class="tag">字体</span>
+                                <span class="tag">设计</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://fonts.google.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge design">设计</div>
+                            <div class="website-icon">
+                                <i class="fab fa-dribbble"></i>
+                            </div>
+                            <h3>Dribbble</h3>
+                            <p>设计师作品展示平台，灵感源泉</p>
+                            <div class="website-meta">
+                                <span class="tag">设计作品</span>
+                                <span class="tag">灵感</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://dribbble.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge design">设计</div>
+                            <div class="website-icon">
+                                <i class="fas fa-icons"></i>
+                            </div>
+                            <h3>Iconfont</h3>
+                            <p>阿里巴巴矢量图标库，图标资源丰富</p>
+                            <div class="website-meta">
+                                <span class="tag">图标</span>
+                                <span class="tag">矢量</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.iconfont.cn" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 添加更多测试网站 -->
+                        <div class="website-card">
+                            <div class="card-badge design">设计</div>
+                            <div class="website-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>Coolors</h3>
+                            <p>配色方案生成器</p>
+                            <div class="website-meta">
+                                <span class="tag">配色</span>
+                                <span class="tag">工具</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://coolors.co" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge design">设计</div>
+                            <div class="website-icon">
+                                <i class="fas fa-crop-alt"></i>
+                            </div>
+                            <h3>Canva</h3>
+                            <p>在线图形设计工具</p>
+                            <div class="website-meta">
+                                <span class="tag">设计</span>
+                                <span class="tag">模板</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.canva.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge design">设计</div>
+                            <div class="website-icon">
+                                <i class="fas fa-font"></i>
+                            </div>
+                            <h3>Font Awesome</h3>
+                            <p>图标字体和CSS工具包</p>
+                            <div class="website-meta">
+                                <span class="tag">图标</span>
+                                <span class="tag">字体</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://fontawesome.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge design">设计</div>
+                            <div class="website-icon">
+                                <i class="fas fa-border-all"></i>
+                            </div>
+                            <h3>Grid.Guide</h3>
+                            <p>网页网格系统生成器</p>
+                            <div class="website-meta">
+                                <span class="tag">网格</span>
+                                <span class="tag">布局</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="http://grid.guide" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 技术社区区 -->
+                <section class="websites-section" id="communities">
+                    <div class="section-header">
+                        <h2><i class="fas fa-users"></i> 技术社区</h2>
+                        <p>交流技术、分享经验的社区平台</p>
+                    </div>
+                    <div class="websites-grid">
+                        <div class="website-card">
+                            <div class="card-badge community">社区</div>
+                            <div class="website-icon">
+                                <i class="fas fa-blog"></i>
+                            </div>
+                            <h3>CSDN</h3>
+                            <p>中国专业IT社区，技术博客丰富</p>
+                            <div class="website-meta">
+                                <span class="tag">博客</span>
+                                <span class="tag">问答</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.csdn.net" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge community">社区</div>
+                            <div class="website-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>掘金</h3>
+                            <p>开发者技术分享社区，优质内容</p>
+                            <div class="website-meta">
+                                <span class="tag">技术分享</span>
+                                <span class="tag">社区</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://juejin.cn" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge community">社区</div>
+                            <div class="website-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3>V2EX</h3>
+                            <p>创意工作者们的社区，讨论氛围好</p>
+                            <div class="website-meta">
+                                <span class="tag">创意</span>
+                                <span class="tag">讨论</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.v2ex.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge community">社区</div>
+                            <div class="website-icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <h3>InfoQ</h3>
+                            <p>促进软件开发领域知识与创新传播</p>
+                            <div class="website-meta">
+                                <span class="tag">资讯</span>
+                                <span class="tag">会议</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.infoq.cn" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 添加更多测试网站 -->
+                        <div class="website-card">
+                            <div class="card-badge community">社区</div>
+                            <div class="website-icon">
+                                <i class="fab fa-reddit"></i>
+                            </div>
+                            <h3>Reddit</h3>
+                            <p>社交新闻聚合网站</p>
+                            <div class="website-meta">
+                                <span class="tag">论坛</span>
+                                <span class="tag">社区</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.reddit.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge community">社区</div>
+                            <div class="website-icon">
+                                <i class="fab fa-hacker-news"></i>
+                            </div>
+                            <h3>Hacker News</h3>
+                            <p>技术新闻和创业社区</p>
+                            <div class="website-meta">
+                                <span class="tag">新闻</span>
+                                <span class="tag">创业</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://news.ycombinator.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge community">社区</div>
+                            <div class="website-icon">
+                                <i class="fab fa-dev"></i>
+                            </div>
+                            <h3>DEV Community</h3>
+                            <p>开发者社区</p>
+                            <div class="website-meta">
+                                <span class="tag">博客</span>
+                                <span class="tag">开源</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://dev.to" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge community">社区</div>
+                            <div class="website-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <h3>Discord</h3>
+                            <p>游戏和社区聊天平台</p>
+                            <div class="website-meta">
+                                <span class="tag">聊天</span>
+                                <span class="tag">社区</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://discord.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 技术文档区 -->
+                <section class="websites-section" id="documentation">
+                    <div class="section-header">
+                        <h2><i class="fas fa-book"></i> 技术文档</h2>
+                        <p>官方技术文档和参考资料</p>
+                    </div>
+                    <div class="websites-grid">
+                        <div class="website-card">
+                            <div class="card-badge documentation">文档</div>
+                            <div class="website-icon">
+                                <i class="fab fa-vuejs"></i>
+                            </div>
+                            <h3>Vue.js 官方文档</h3>
+                            <p>渐进式JavaScript框架文档</p>
+                            <div class="website-meta">
+                                <span class="tag">前端框架</span>
+                                <span class="tag">文档</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://vuejs.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge documentation">文档</div>
+                            <div class="website-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h3>React 官方文档</h3>
+                            <p>用于构建用户界面的JavaScript库</p>
+                            <div class="website-meta">
+                                <span class="tag">前端框架</span>
+                                <span class="tag">文档</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://reactjs.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge documentation">文档</div>
+                            <div class="website-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <h3>Node.js 官方文档</h3>
+                            <p>基于Chrome V8引擎的JavaScript运行环境</p>
+                            <div class="website-meta">
+                                <span class="tag">后端</span>
+                                <span class="tag">文档</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://nodejs.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge documentation">文档</div>
+                            <div class="website-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <h3>Python 官方文档</h3>
+                            <p>Python编程语言官方文档</p>
+                            <div class="website-meta">
+                                <span class="tag">编程语言</span>
+                                <span class="tag">文档</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://docs.python.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 添加更多测试网站 -->
+                        <div class="website-card">
+                            <div class="card-badge documentation">文档</div>
+                            <div class="website-icon">
+                                <i class="fab fa-angular"></i>
+                            </div>
+                            <h3>Angular 官方文档</h3>
+                            <p>平台和框架用于构建SPA</p>
+                            <div class="website-meta">
+                                <span class="tag">前端框架</span>
+                                <span class="tag">文档</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://angular.io" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge documentation">文档</div>
+                            <div class="website-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <h3>JavaScript 官方文档</h3>
+                            <p>MDN JavaScript指南和文档</p>
+                            <div class="website-meta">
+                                <span class="tag">编程语言</span>
+                                <span class="tag">文档</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge documentation">文档</div>
+                            <div class="website-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <h3>Java 官方文档</h3>
+                            <p>Java平台官方文档</p>
+                            <div class="website-meta">
+                                <span class="tag">编程语言</span>
+                                <span class="tag">文档</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://docs.oracle.com/en/java/" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge documentation">文档</div>
+                            <div class="website-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>MySQL 官方文档</h3>
+                            <p>开源关系型数据库文档</p>
+                            <div class="website-meta">
+                                <span class="tag">数据库</span>
+                                <span class="tag">文档</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://dev.mysql.com/doc/" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 视频教程区 -->
+                <section class="websites-section" id="tutorials">
+                    <div class="section-header">
+                        <h2><i class="fas fa-video"></i> 视频教程</h2>
+                        <p>系统学习技术的视频资源</p>
+                    </div>
+                    <div class="websites-grid">
+                        <div class="website-card">
+                            <div class="card-badge tutorial">教程</div>
+                            <div class="website-icon">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <h3>YouTube</h3>
+                            <p>全球最大的视频分享网站，教程丰富</p>
+                            <div class="website-meta">
+                                <span class="tag">视频</span>
+                                <span class="tag">教程</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.youtube.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tutorial">教程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-tv"></i>
+                            </div>
+                            <h3>Bilibili</h3>
+                            <p>国内知名视频网站，学习资源丰富</p>
+                            <div class="website-meta">
+                                <span class="tag">视频</span>
+                                <span class="tag">学习</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.bilibili.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tutorial">教程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h3>网易云课堂</h3>
+                            <p>领先的在线教育平台，课程质量高</p>
+                            <div class="website-meta">
+                                <span class="tag">在线课程</span>
+                                <span class="tag">微专业</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://study.163.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tutorial">教程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3>极客时间</h3>
+                            <p>技术人的终身学习平台，专栏质量高</p>
+                            <div class="website-meta">
+                                <span class="tag">技术课程</span>
+                                <span class="tag">专栏</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://time.geekbang.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 添加更多测试网站 -->
+                        <div class="website-card">
+                            <div class="card-badge tutorial">教程</div>
+                            <div class="website-icon">
+                                <i class="fab fa-leanpub"></i>
+                            </div>
+                            <h3>Udemy</h3>
+                            <p>在线学习和教学平台</p>
+                            <div class="website-meta">
+                                <span class="tag">课程</span>
+                                <span class="tag">教学</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.udemy.com" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tutorial">教程</div>
+                            <div class="website-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <h3>LinkedIn Learning</h3>
+                            <p>专业技能学习平台</p>
+                            <div class="website-meta">
+                                <span class="tag">职业</span>
+                                <span class="tag">技能</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.linkedin.com/learning/" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tutorial">教程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Coursera</h3>
+                            <p>在线课程平台</p>
+                            <div class="website-meta">
+                                <span class="tag">大学</span>
+                                <span class="tag">认证</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.coursera.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-card">
+                            <div class="card-badge tutorial">教程</div>
+                            <div class="website-icon">
+                                <i class="fas fa-chalkboard"></i>
+                            </div>
+                            <h3>Khan Academy</h3>
+                            <p>免费在线教育平台</p>
+                            <div class="website-meta">
+                                <span class="tag">教育</span>
+                                <span class="tag">免费</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://www.khanacademy.org" target="_blank" class="visit-btn">访问网站</a>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+
+
+
+<!-- 页脚部分 -->
+<footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>计算机协会</h3>
+                <p>致力于提升学生计算机技术水平，培养创新人才。</p>
+            </div>
+            <div class="footer-column">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="Navigate.html">首页</a></li>
+                    <li><a href="../HTML/info.html">关于我们</a></li>
+                    <li><a href="#services">技术培训</a></li>
+                    <li><a href="../HTML/News.html">活动资讯</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>联系我们</h4>
+                <ul>
+                    <li>📍 地址：成都师范学院</li>
+                    <li>📞 电话：123-456-7890</li>
+                    <li>📧 邮箱：csca.edu.cn</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+        <h4>关注我们</h4>
+    <div class="social-links">
+        <a href="https://github.com/your-association" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" title="GitHub">
+        </a>
+        <a href="https://space.bilibili.com/your-bilibili" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/bilibili.svg" alt="Bilibili" title="Bilibili">
+        </a>
+        <a href="https://weibo.com/your-weibo" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/sinaweibo.svg" alt="Weibo" title="Weibo">
+        </a>
+    </div>
+</div> 
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 计算机协会. 保留所有权利.</p>
+        </div>
+</footer>
+
+    <script src="../js/web.js"></script>
+</body>
+</html>

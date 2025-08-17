@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算机协会</title>
+    <link rel="stylesheet" href="../CSS/Navigate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+<!-- 顶部导航栏 -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <h2>计算机协会</h2>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="Navigate.html" class="nav-link">首页</a>
+            </li>
+            <li class="nav-item">
+                <a href="../DOC/DOC-HTML/Main.html" class="nav-link" target="_blank">本站使用手册</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://sr.mihoyo.com/cloud/#/" class="nav-link" target="_blank">技术培训</a>
+            </li>
+            <li class="nav-item">
+                <a href="../HTML/News.html" class="nav-link" target="_blank">活动资讯</a>
+            </li>
+            <li class="nav-item">
+                <a href="../HTML/info.html" class="nav-link" target="_blank">联系我们</a>
+            </li>
+        </ul>
+        <!-- 天气组件 -->
+        <div class="weather-widget" id="weatherWidget">
+            <div class="weather-info">
+                <span class="weather-main">
+                    <span class="weather-icon">☀️</span>
+                    <span class="weather-temp" id="weatherTemp">25°</span>
+                    <span class="weather-city" id="weatherCity">北京</span>
+                </span>
+                <span class="weather-tip" id="weatherTip">今日天气晴朗，适合户外活动</span>
+            </div>
+        </div>
+        <!-- 移动端菜单按钮 -->
+        <div class="nav-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- 轮播图区域 -->
+<section class="hero-carousel">
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="../photo/1.jpg.jpeg" alt="计算机协会活动" class="carousel-image">
+        </div>
+        <div class="carousel-slide">
+            <img src="../photo/2.jpeg" alt="技术分享会" class="carousel-image">
+        </div>
+        <div class="carousel-slide">
+            <img src="../photo/3.jpeg" alt="项目实战" class="carousel-image">
+        </div>
+    </div>
+    <div class="carousel-indicators">
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+    </div>
+    <button class="carousel-control prev" id="prevBtn">&#10094;</button>
+    <button class="carousel-control next" id="nextBtn">&#10095;</button>
+</section>
+
+
+
+<!-- 招新和部门模块区域 -->
+<section class="recruitment-section">
+    <div class="recruitment-container">
+        <!-- 左侧招新模块 -->
+        <div class="recruitment-left">
+            <!-- 招新视频模块 -->
+            <div class="recruitment-video">
+                <h2 class="section-title">宣传视频</h2>
+                <div class="video-container">
+        <video controls preload="metadata" style="width:100%;height:100%;object-fit:cover;background:#000;">
+            <source src="../media/Recruitment-Video.mp4" type="video/mp4">
+            <p>您的浏览器不支持视频播放。请确保视频文件存在。</p>
+        </video>
+    </div>
+    <!-- 招新介绍文字和报名按钮 -->
+<div class="recruitment-intro">
+    <h3>🎉 计算机协会招新啦！</h3>
+    <p>计算机协会是面向全校学生的技术类社团，致力于提升同学们的计算机技术水平，
+       培养创新思维和实践能力。我们提供丰富的学习资源、项目实践机会和技术交流平台，
+       帮助成员在计算机领域不断成长。</p>
+<a href="../HTML/info.html" class="apply-button" target="_blank">立即报名</a>
+   </div>
+            </div>
+        </div>
+        
+        <!-- 右侧部门模块 -->
+        <div class="departments-right">
+            <h2 class="section-title">部门架构</h2>
+            <!-- 部门轮播图 -->
+            <div class="department-carousel">
+                <div class="dept-carousel-container">
+                    <div class="dept-carousel-slide active">
+                        <div class="slide-content">
+                            <h3>技术部风采</h3>
+                            <p>技术部是协会的核心部门，负责技术培训和项目开发</p>
+                        </div>
+                    </div>
+                    <div class="dept-carousel-slide">
+                        <div class="slide-content">
+                            <h3>竞赛部成果</h3>
+                            <p>竞赛部专注于各类编程竞赛的培训和指导</p>
+                        </div>
+                    </div>
+                    <div class="dept-carousel-slide">
+                        <div class="slide-content">
+                            <h3>宣传部创意</h3>
+                            <p>宣传部负责协会活动的宣传设计和品牌推广</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dept-carousel-indicators">
+                    <span class="dept-indicator active" data-slide="0"></span>
+                    <span class="dept-indicator" data-slide="1"></span>
+                    <span class="dept-indicator" data-slide="2"></span>
+                </div>
+            </div>
+            
+            <!-- 六个部门方块 -->
+            <div class="departments-grid">
+                <div class="department-box" data-dept="tech">
+                    <div class="dept-icon">💻</div>
+                    <h4>技术部</h4>
+                </div>
+                <div class="department-box" data-dept="contest">
+                    <div class="dept-icon">🏆</div>
+                    <h4>竞赛部</h4>
+                </div>
+                <div class="department-box" data-dept="pr">
+                    <div class="dept-icon">📢</div>
+                    <h4>宣传部</h4>
+                </div>
+                <div class="department-box" data-dept="finance">
+                    <div class="dept-icon">💰</div>
+                    <h4>财务部</h4>
+                </div>
+                <div class="department-box" data-dept="activity">
+                    <div class="dept-icon">🎉</div>
+                    <h4>活动部</h4>
+                </div>
+                <div class="department-box" data-dept="secretary">
+                    <div class="dept-icon">📝</div>
+                    <h4>秘书部</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- 活动咨询板块 -->
+<section class="events-section">
+    <div class="section-title">活动资讯</div>
+    <div class="events-content-wrapper">
+        <div class="events-content">
+            <div class="past-events">
+                <h3>往期活动剪影</h3>
+                <div class="past-events-grid">
+                    <div class="past-event-item">
+                        <div class="photo-frame">
+                            <img src="../photo/1.jpg.jpeg" alt="往期活动1">
+                        </div>
+                    </div>
+                    <div class="past-event-item">
+                        <div class="photo-frame">
+                            <img src="../photo/2.jpeg" alt="往期活动2">
+                        </div>
+                    </div>
+                    <div class="past-event-item">
+                        <div class="photo-frame">
+                            <img src="../photo/3.jpeg" alt="往期活动3">
+                        </div>
+                    </div>
+                    <div class="past-event-item">
+                        <div class="photo-frame">
+                            <img src="../photo/1.jpg.jpeg" alt="往期活动4">
+                        </div>
+                    </div>
+                    <div class="past-event-item">
+                        <div class="photo-frame">
+                            <img src="../photo/2.jpeg" alt="往期活动5">
+                        </div>
+                    </div>
+                    <div class="past-event-item">
+                        <div class="photo-frame">
+                            <img src="../photo/3.jpeg" alt="往期活动6">
+                        </div>
+                    </div>
+                </div>
+                <!-- 创意横幅 -->
+                <div class="past-events-banner">
+                    <span class="past-events-banner-text">风里雨里，计协等你</span>
+                </div>
+            </div>
+            <div class="upcoming-events">
+                <h3>近期活动</h3>
+                <div class="upcoming-event-item" data-url="../HTML/event-details.html">
+                    <div class="upcoming-event-image">
+                        <img src="../photo/1.jpg.jpeg" alt="即将举办的活动">
+                    </div>
+                    <div class="upcoming-event-details">
+                        <h4>2025年度计算机协会成立大会</h4>
+                        <p>计算机协会成立大会计算机协会成立大会计算机协会成立大会计算机协会成立大会计算机协会成立大会计算机协会成立大会</p>
+                        <!-- 活动信息直接放在活动描述下方 -->
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <span class="event-meta-icon">⏰</span>
+                                <span class="event-meta-label">活动时间：</span>
+                                <span class="event-meta-value">2025-10-15 14:00</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <span class="event-meta-icon">📍</span>
+                                <span class="event-meta-label">活动地点：</span>
+                                <span class="event-meta-value">北体主干道</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <span class="event-meta-icon">🎓</span>
+                                <span class="event-meta-label">学分类型：</span>
+                                <span class="event-meta-value">文艺体育0.15</span>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <a href="news.html" class="modern-button" target="_blank">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 技术培训板块 -->
+<section class="training-section">
+    <h2 class="section-title">技术培训</h2>
+    <div class="training-carousel-container">
+        <button class="training-carousel-control prev" id="trainingPrevBtn">&#10094;</button>
+        <div class="training-carousel-wrapper">
+            <div class="training-carousel" id="trainingCarousel">
+                <!-- 培训项目会通过JavaScript动态添加 -->
+            </div>
+        </div>
+        <button class="training-carousel-control next" id="trainingNextBtn">&#10095;</button>
+    </div>
+</section>
+
+
+
+<!--  我们提供的服务部分 -->
+<section class="features-section">
+    <div class="container">
+        <h2 class="section-title">我们的服务</h2>
+        <div class="features-grid">
+            <a href="../HTML/web.html" class="feature-link" target="_blank">
+                <div class="feature-box">
+                    <div class="feature-icon">🌐</div>
+                    <h3>网站收录</h3>
+                    <p>收录优质技术网站，方便快速访问</p>
+                </div>
+            </a>
+            <a href="https://www.freecodecamp.org" class="feature-link" target="_blank">
+                <div class="feature-box">
+                    <div class="feature-icon">🆓</div>
+                    <h3>免费资源</h3>
+                    <p>提供各类免费学习资源和技术工具</p>
+                </div>
+            </a>
+            <a href="https://support.microsoft.com" class="feature-link" target="_blank">
+                <div class="feature-box">
+                    <div class="feature-icon">🔧</div>
+                    <h3>电脑维修</h3>
+                    <p>提供电脑硬件软件问题解决方案</p>
+                </div>
+            </a>
+            <a href="mailto:csa@university.edu.cn" class="feature-link">
+                <div class="feature-box">
+                    <div class="feature-icon">💡</div>
+                    <h3>做出贡献/提出意见</h3>
+                    <p>欢迎提交建议和反馈，共同完善协会</p>
+                </div>
+            </a>
+            <a href="https://codeforces.com" class="feature-link" target="_blank">
+                <div class="feature-box">
+                    <div class="feature-icon">🏆</div>
+                    <h3>竞赛资源</h3>
+                    <p>提供各类编程竞赛资料和培训内容</p>
+                </div>
+            </a>
+            <a href="#" class="feature-link">
+                <div class="feature-box">
+                    <div class="feature-icon">✨</div>
+                    <h3>敬请期待</h3>
+                    <p>更多服务正在开发中，敬请期待</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 页脚部分 -->
+<footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>计算机协会</h3>
+                <p>致力于提升学生计算机技术水平，培养创新人才。</p>
+            </div>
+            <div class="footer-column">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="Navigate.html">首页</a></li>
+                    <li><a href="../HTML/info.html">关于我们</a></li>
+                    <li><a href="#services">技术培训</a></li>
+                    <li><a href="../HTML/News.html">活动资讯</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>联系我们</h4>
+                <ul>
+                    <li>📍 地址：成都师范学院</li>
+                    <li>📞 电话：123-456-7890</li>
+                    <li>📧 邮箱：csca.edu.cn</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+        <h4>关注我们</h4>
+    <div class="social-links">
+        <a href="https://github.com/your-association" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" title="GitHub">
+        </a>
+        <a href="https://space.bilibili.com/your-bilibili" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/bilibili.svg" alt="Bilibili" title="Bilibili">
+        </a>
+        <a href="https://weibo.com/your-weibo" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/sinaweibo.svg" alt="Weibo" title="Weibo">
+        </a>
+    </div>
+</div> 
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 计算机协会. 保留所有权利.</p>
+        </div>
+</footer>
+
+
+    <script src="../js/Navigate.js"></script>
+</body>
+</html>

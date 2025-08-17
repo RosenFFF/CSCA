@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本站使用手册</title>
+    <link rel="stylesheet" href="../DOC-CSS/Main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>计算机协会</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../HTML/Navigate.html" class="nav-link" target="_blank">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../DOC-HTML/Main.html" class="nav-link">本站使用手册</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">技术培训</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#events" class="nav-link">活动资讯</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">联系我们</a>
+                </li>
+            </ul>
+            <!-- 天气组件 -->
+            <div class="weather-widget" id="weatherWidget">
+                <div class="weather-info">
+                    <span class="weather-main">
+                        <span class="weather-icon">☀️</span>
+                        <span class="weather-temp" id="weatherTemp">25°</span>
+                        <span class="weather-city" id="weatherCity">北京</span>
+                    </span>
+                    <span class="weather-tip" id="weatherTip">今日天气晴朗，适合户外活动</span>
+                </div>
+            </div>
+            <!-- 主题切换按钮 -->
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </div>
+            <!-- 移动端菜单按钮 -->
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- 左侧大纲导航 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>本站使用手册</h3>
+            </div>
+            <ul class="toc">
+                <li class="toc-item has-children">
+                    <a href="#features" class="toc-link">关于计算机协会</a>
+                    <span class="toc-arrow">&#9660;</span>
+                    <ul class="toc-submenu">
+                        <li><a href="#History-background">一、历史背景</a></li>
+                        <li><a href="#Staff-Size">二、人员规模</a></li>
+                        <li><a href="#Present-Situation">三、当前现状</a></li>
+                        <li class="toc-item has-children">
+                            <a href="#Organization">四、组织架构</a>
+                            <span class="toc-arrow">&#9660;</span>
+                            <ul class="toc-submenu">
+                                <li><a href="#Publicize">宣传部</a></li>
+                                <li><a href="#Activity">活动部</a></li>
+                                <li><a href="#Secret">秘书部</a></li>
+                                <li><a href="#Money">财务部</a></li>
+                                <li><a href="#Competition">竞赛部</a></li>
+                                <li><a href="#Technology">技术部</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#Bless">五、最后寄语</a></li>
+                    </ul>
+                </li>
+                <li class="toc-item has-children">
+                    <a href="#rules" class="toc-link">计协规章制度</a>
+                    <span class="toc-arrow">&#9660;</span>
+                    <ul class="toc-submenu">
+                        <li><a href="#url-collection">一、收录网址</a></li>
+                        <li><a href="#rule-1">二、行为规范</a></li>
+                        <li><a href="#rule-2">三、会议制度</a></li>
+                        <li><a href="#rule-3">四、培训制度</a></li>
+                        <li><a href="#rule-4">五、奖惩制度</a></li>
+                        <li><a href="#rule-5">六、其他规定</a></li>
+                    </ul>
+                </li>
+                <li class="toc-item has-children">
+                    <a href="#services" class="toc-link">我们提供的服务</a>
+                    <span class="toc-arrow">&#9660;</span>
+                    <ul class="toc-submenu">
+                        <li><a href="#service-1">一、技术培训</a></li>
+                        <li><a href="#service-2">二、项目实践</a></li>
+                        <li><a href="#service-3">三、竞赛指导</a></li>
+                        <li><a href="#service-4">四、资源共享</a></li>
+                        <li><a href="#service-5">五、就业指导</a></li>
+                        <li><a href="#service-6">六、其他服务</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+        
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <article class="document">
+                    <header class="document-header">
+                        <h1 id="introduction">计算机协会</h1>
+                        <p class="meta">最后更新: 2025年8月17日 | 推荐阅读时长: 自由阅读</p>
+                    </header>
+
+                    <section id="introduction-section">
+                        <p>这是我们计算机协会站群使用的详细说明文档,我们竭尽全力为全校师生提供便捷、舒适的服务，
+                            同时我们也会定期举办各种各样的活动大家可以积极参与。风里雨里，计协等你🥰
+                        </p>
+                        
+                        <div class="alert alert-info">
+                            <strong>提示:</strong> 如果您想快速体验我们为全校师生提供的便捷服务的使用方法，点击左侧目录跳转至相应的栏目即可。
+                            内容较多，如果现在是晚上，您可以点击右上角切换护眼主题。
+                        </div>
+                    </section>
+
+                    <!-- 关于计算机协会 -->
+                    <section id="features">
+                        <h2 class="collapsible-header">关于计算机协会 <span class="collapse-arrow">&#9660;</span></h2>
+                        
+                        <div class="collapsible-content">
+                            <h3 id="History-background">一、历史背景</h3>
+                            <p>计算机协会成立于2005年，由一群热爱计算机技术的学生自发组织成立。经过近20年的发展，协会已成为学校最具影响力的技术类社团之一。协会始终秉承"技术改变生活，创新驱动未来"的宗旨，致力于提升学生计算机技术水平，培养创新人才。</p>
+                            
+                            <h3 id="Staff-Size">二、人员规模</h3>
+                            <p>计算机协会目前拥有会员200余人，核心成员30余人。协会设有会长1名，副会长2名，以及各个部门负责人。协会成员涵盖计算机科学与技术、软件工程、网络工程、数据科学与大数据技术等多个专业，形成了良好的技术氛围和团队合作精神。</p>
+                            
+                            <h3 id="Present-Situation">三、当前现状</h3>
+                            <p>目前，计算机协会在校园内具有较高的知名度和影响力。协会定期举办技术讲座、编程竞赛、项目实训等活动，吸引了大量学生参与。协会成员在各类学科竞赛中屡获佳绩，为学校争得了荣誉。同时，协会与多家企业建立了合作关系，为学生提供了丰富的实习和就业机会。</p>
+                            
+                            <div class="collapsible">
+                                <div class="collapse-header">
+                                    <h3 id="Organization">四、组织架构 <span class="collapse-arrow">&#9660;</span></h3>
+                                </div>
+                                <div class="collapse-content">
+                                    <h4 id="Publicize">宣传部</h4>
+                                    <p>负责协会的宣传推广工作，包括海报设计、活动宣传、新媒体运营等。通过多种渠道扩大协会影响力，吸引更多同学加入。</p>
+                                    
+                                    <h4 id="Activity">活动部</h4>
+                                    <p>负责策划和组织各类技术活动，包括技术讲座、编程竞赛、项目实训等。确保活动的顺利进行，提升会员的技术水平和实践能力。</p>
+                                    
+                                    <h4 id="Secret">秘书部</h4>
+                                    <p>负责协会的日常管理工作，包括会议记录、文件整理、会员管理等。协调各部门之间的工作，确保协会高效运转。</p>
+                                    
+                                    <h4 id="Money">财务部</h4>
+                                    <p>负责协会的财务管理，包括经费预算、收支记录、财务报告等。确保协会资金的合理使用，为各项活动提供资金保障。</p>
+                                    
+                                    <h4 id="Competition">竞赛部</h4>
+                                    <p>负责组织和指导会员参加各类学科竞赛，包括ACM、蓝桥杯、数学建模等。提升会员的竞赛水平，为学校争得荣誉。</p>
+                                    
+                                    <h4 id="Technology">技术部</h4>
+                                    <p>负责技术研究和项目开发，包括Web开发、移动应用开发、人工智能等方向。组织技术分享会，提升会员的技术能力。</p>
+                                </div>
+                            </div>
+                            
+                            <h3 id="Bless">五、最后寄语</h3>
+                            <p>计算机协会将继续秉承"技术改变生活，创新驱动未来"的宗旨，为全校师生提供更优质的服务。我们欢迎每一位热爱技术的同学加入，一起学习、一起成长、一起创造美好的未来！</p>
+                        </div>
+                    </section>
+
+                    <!-- 计协规章制度 -->
+                    <section id="rules">
+                        <h2 class="collapsible-header">计协规章制度 <span class="collapse-arrow">&#9660;</span></h2>
+                        
+                        <div class="collapsible-content">
+                            <h3 id="url-collection">一、收录网址</h3>
+                            <p>协会官方网站：<a href="http://csa.example.com">http://csa.example.com</a><br>
+                            协会论坛：<a href="http://bbs.csa.example.com">http://bbs.csa.example.com</a><br>
+                            协会GitHub组织：<a href="https://github.com/csa-example">https://github.com/csa-example</a><br>
+                            协会微信公众号：计算机协会<br>
+                            协会QQ群：123456789</p>
+                            
+                            <h3 id="rule-1">二、行为规范</h3>
+                            <p>1. 遵守国家法律法规，遵守学校规章制度<br>
+                            2. 热爱技术，积极学习，不断提升自身技术水平<br>
+                            3. 尊重他人，团结协作，营造良好的学习氛围<br>
+                            4. 爱护公物，保持环境卫生<br>
+                            5. 积极参与协会活动，为协会发展贡献力量</p>
+                            
+                            <h3 id="rule-2">三、会议制度</h3>
+                            <p>1. 全体大会每学期召开一次，总结工作，部署任务<br>
+                            2. 部门会议每月召开一次，讨论部门工作<br>
+                            3. 临时会议根据需要召开，讨论紧急事项<br>
+                            4. 会议需做好记录，重要决议需形成会议纪要</p>
+                            
+                            <h3 id="rule-3">四、培训制度</h3>
+                            <p>1. 新会员培训：每学期初对新会员进行基础培训<br>
+                            2. 技术培训：定期举办各类技术讲座和实训<br>
+                            3. 竞赛培训：针对各类竞赛进行专项培训<br>
+                            4. 培训需制定计划，确保培训效果</p>
+                            
+                            <h3 id="rule-4">五、奖惩制度</h3>
+                            <p>1. 对表现优秀的会员给予表彰和奖励<br>
+                            2. 对违反规章制度的会员给予批评教育<br>
+                            3. 对严重违纪的会员给予警告或除名处理<br>
+                            4. 奖惩情况记录在案，作为评优依据</p>
+                            
+                            <h3 id="rule-5">六、其他规定</h3>
+                            <p>1. 会员需按时缴纳会费，用于协会日常开支<br>
+                            2. 会员需积极参加协会活动，无故缺席三次以上视为自动退会<br>
+                            3. 协会资产归协会所有，任何人不得私自占有<br>
+                            4. 本制度解释权归计算机协会所有</p>
+                        </div>
+                    </section>
+
+                    <!-- 我们提供的服务 -->
+                    <section id="services">
+                        <h2 class="collapsible-header">我们提供的服务 <span class="collapse-arrow">&#9660;</span></h2>
+                        
+                        <div class="collapsible-content">
+                            <h3 id="service-1">一、技术培训</h3>
+                            <p>我们定期举办各类技术培训，包括编程语言、Web开发、移动应用开发、数据库技术、人工智能等方向。培训由经验丰富的学长学姐或专业老师授课，帮助会员快速掌握实用技能。</p>
+                            
+                            <h3 id="service-2">二、项目实践</h3>
+                            <p>我们组织会员参与实际项目开发，包括网站开发、移动应用开发、管理系统开发等。通过项目实践，会员可以将理论知识应用到实际中，提升工程能力和团队协作能力。</p>
+                            
+                            <h3 id="service-3">三、竞赛指导</h3>
+                            <p>我们为有意参加各类学科竞赛的会员提供专业指导，包括ACM程序设计竞赛、蓝桥杯软件和信息技术专业人才大赛、中国大学生计算机设计大赛等。通过系统培训和实战演练，提升会员的竞赛水平。</p>
+                            
+                            <h3 id="service-4">四、资源共享</h3>
+                            <p>我们建立了丰富的学习资源库，包括技术文档、视频教程、开源项目等。会员可以随时访问这些资源，进行自主学习和研究。</p>
+                            
+                            <h3 id="service-5">五、就业指导</h3>
+                            <p>我们邀请企业专家和优秀校友为会员提供就业指导，包括简历制作、面试技巧、职业规划等。同时，我们与多家企业建立了合作关系，为会员提供实习和就业机会。</p>
+                            
+                            <h3 id="service-6">六、其他服务</h3>
+                            <p>除了以上服务外，我们还提供技术咨询、学习交流、团建活动等服务。我们致力于为会员创造一个良好的学习和成长环境，让每一位会员都能在协会中有所收获。</p>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- 页脚部分 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>计算机协会</h3>
+                <p>致力于提升学生计算机技术水平，培养创新人才。</p>
+            </div>
+            <div class="footer-column">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="../../HTML/Navigate.html">首页</a></li>
+                    <li><a href="../HTML/info.html">关于我们</a></li>
+                    <li><a href="#services">技术培训</a></li>
+                    <li><a href="../HTML/News.html">活动资讯</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>联系我们</h4>
+                <ul>
+                    <li>📍 地址：成都师范学院</li>
+                    <li>📞 电话：123-456-7890</li>
+                    <li>📧 邮箱：csca.edu.cn</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>关注我们</h4>
+                <div class="social-links">
+                    <a href="https://github.com/your-association" target="_blank" class="social-icon">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" title="GitHub">
+                    </a>
+                    <a href="https://space.bilibili.com/your-bilibili" target="_blank" class="social-icon">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/bilibili.svg" alt="Bilibili" title="Bilibili">
+                    </a>
+                    <a href="https://weibo.com/your-weibo" target="_blank" class="social-icon">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/sinaweibo.svg" alt="Weibo" title="Weibo">
+                    </a>
+                </div>
+            </div> 
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 计算机协会. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="../DOC-js/Main.js"></script>
+    <script>
+        // 添加可折叠功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 处理一级标题的折叠功能
+            const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
+            
+            collapsibleHeaders.forEach(header => {
+                const arrow = header.querySelector('.collapse-arrow');
+                const content = header.nextElementSibling;
+                
+                header.style.cursor = 'pointer';
+                header.style.display = 'flex';
+                header.style.justifyContent = 'space-between';
+                header.style.alignItems = 'center';
+                
+                header.addEventListener('click', function() {
+                    content.classList.toggle('collapsed');
+                    arrow.textContent = content.classList.contains('collapsed') ? '\u25B6' : '\u25BC';
+                });
+            });
+            
+            // 处理二级折叠功能
+            const collapsibleSections = document.querySelectorAll('.collapsible');
+            
+            collapsibleSections.forEach(section => {
+                const header = section.querySelector('.collapse-header');
+                const arrow = header.querySelector('.collapse-arrow');
+                const content = section.querySelector('.collapse-content');
+                
+                header.style.cursor = 'pointer';
+                header.style.display = 'flex';
+                header.style.justifyContent = 'space-between';
+                header.style.alignItems = 'center';
+                
+                // 初始化为折叠状态
+                content.classList.add('collapsed');
+                arrow.textContent = '\u25B6';
+                
+                header.addEventListener('click', function() {
+                    content.classList.toggle('collapsed');
+                    arrow.textContent = content.classList.contains('collapsed') ? '\u25B6' : '\u25BC';
+                });
+            });
+            
+            // 初始化所有折叠内容为展开状态（除了二级折叠）
+            const collapsibleContents = document.querySelectorAll('.collapsible-content');
+            collapsibleContents.forEach(content => {
+                content.classList.remove('collapsed');
+            });
+        });
+    </script>
+</body>
+</html>

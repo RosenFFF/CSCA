@@ -1,0 +1,721 @@
+
+
+
+
+
+
+/* 导航栏样式*/
+.navbar {
+    background-color: #2c3e50;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.nav-logo h2 {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-item {
+    line-height: 40px;
+    margin-left: 1.5rem;
+}
+/* 修改导航链接样式 */
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: transparent;
+    color: #3498db;
+    transform: scale(1.05);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* 保持移动端原有的悬停效果 */
+@media screen and (max-width: 960px) {
+    .nav-link:hover {
+        background-color: #3498db;
+        color: #fff;
+    }
+    
+    .nav-link:hover::after {
+        width: 0;
+    }
+}
+
+/* 现代化天气组件样式 */
+.weather-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: white;
+    font-size: 0.85rem;
+    margin-left: 20px;
+    min-width: 180px;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.weather-main {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.weather-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5));
+}
+
+.weather-temp {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+.weather-city {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.weather-tip {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    text-align: right;
+    max-width: 200px;
+    line-height: 1.3;
+}
+
+/* 响应式设计 - 在小屏幕上隐藏天气提示 */
+@media screen and (max-width: 960px) {
+    .weather-tip {
+        display: none;
+    }
+    
+    .weather-widget {
+        min-width: auto;
+    }
+    
+    .weather-main {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .weather-widget {
+        display: none;
+    }
+}
+
+
+
+        :root {
+            --primary-light: #e0f2fe;
+            --secondary-light: #f0f9ff;
+            --accent-blue: #0ea5e9;
+            --accent-purple: #8b5cf6;
+            --accent-cyan: #06b6d4;
+            --text-dark: #0f172a;
+            --text-secondary: #475569;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+             min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+            border-radius: 2px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: var(--card-bg);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--accent-blue);
+        }
+
+        h2::before {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 30px;
+            background: linear-gradient(to bottom, var(--accent-blue), var(--accent-purple));
+            border-radius: 4px;
+        }
+
+        .recruitment-info {
+            background: linear-gradient(120deg, #dbeafe 0%, #f0f9ff 100%);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .info-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .info-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .info-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .info-details {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .qq-groups {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .qq-group {
+            flex: 1;
+            min-width: 250px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .qq-group:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .qq-group h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: var(--accent-blue);
+        }
+
+        .qq-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 15px 0;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .contact-president {
+            width: 100%;
+            max-width: 600px;
+            padding: 30px;
+            background: linear-gradient(120deg, #dbeafe 0%, #f0f9ff 100%);
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-president h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--accent-purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .responsible-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+        }
+
+        .contact-card {
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: var(--accent-blue);
+        }
+
+        .contact-info {
+            margin-top: 15px;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .departments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .department {
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .department:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .department-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .department-icon {
+            font-size: 2rem;
+        }
+
+        .tech { color: var(--accent-blue); }
+        .contest { color: #f59e0b; }
+        .pr { color: #ec4899; }
+        .finance { color: #10b981; }
+        .activity { color: var(--accent-purple); }
+        .secretary { color: var(--accent-cyan); }
+
+        .department h3 {
+            font-size: 1.4rem;
+        }
+
+        .department p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .closing {
+            text-align: center;
+            padding: 50px 30px;
+            margin-top: 30px;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+            border-radius: 16px;
+        }
+
+        .closing h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--accent-blue);
+        }
+
+        .closing p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            color: var(--text-secondary);
+        }
+
+        .emoji-row {
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .qq-groups, 
+            .responsible-container,
+            .departments {
+                flex-direction: column;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .info-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+
+/*二维码图片展示放大*/
+/* 二维码图片容器样式 */
+.qrcode-container {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    border-radius: 8px;
+    background: rgba(148, 163, 184, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.qrcode-container:hover {
+    transform: scale(1.05);
+}
+
+.qrcode-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* 模态框样式 */
+.qr-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    max-height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+    from {transform: translate(-50%, -50%) scale(0)}
+    to {transform: translate(-50%, -50%) scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+#qrCaption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    position: absolute;
+    top: calc(50% + 250px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+    }
+    
+    .close {
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+    }
+    
+    #qrCaption {
+        font-size: 16px;
+        top: calc(50% + 200px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 页脚样式 */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 50px 0 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #3498db;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-icon:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* 将图标变为白色 */
+}
+
+.social-icon:hover img {
+    filter: brightness(0) invert(1); /* 保持图标为白色 */
+}

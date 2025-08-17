@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../CSS/info.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<div id="qrModal" class="qr-modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="qrModalImage">
+    <div id="qrCaption"></div>
+</div>
+
+<body>
+
+
+
+
+
+    
+<!-- 顶部导航栏 -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <h2>计算机协会</h2>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="Navigate.html" class="nav-link">首页</a>
+            </li>
+            <li class="nav-item">
+                <a href="../DOC/DOC-HTML/Main.html" class="nav-link" target="_blank">本站使用手册</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://sr.mihoyo.com/cloud/#/" class="nav-link" target="_blank">技术培训</a>
+            </li>
+            <li class="nav-item">
+                <a href="../HTML/News.html" class="nav-link" target="_blank">活动资讯</a>
+            </li>
+            <li class="nav-item">
+                <a href="../HTML/info.html" class="nav-link" target="_blank">联系我们</a>
+            </li>
+        </ul>
+        <!-- 天气组件 -->
+        <div class="weather-widget" id="weatherWidget">
+            <div class="weather-info">
+                <span class="weather-main">
+                    <span class="weather-icon">☀️</span>
+                    <span class="weather-temp" id="weatherTemp">25°</span>
+                    <span class="weather-city" id="weatherCity">北京</span>
+                </span>
+                <span class="weather-tip" id="weatherTip">今日天气晴朗，适合户外活动</span>
+            </div>
+        </div>
+        <!-- 移动端菜单按钮 -->
+        <div class="nav-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+
+
+
+
+ <div class="container">
+        <header>
+            <h1>计算机协会招新啦! 🎉</h1>
+            <p class="subtitle">加入我们，开启你的技术之旅，与志同道合的伙伴一起探索代码的无限可能</p>
+        </header>
+
+        <section class="section">
+            <div class="recruitment-info">
+                <h2 class="info-title">📍 招新信息</h2>
+                <div class="info-content">
+                    <div class="info-item">
+                        <h3>📅 时间安排</h3>
+                        <div class="info-details">
+                            <p>9月15日 - 9月30日</p>
+                            <p>每天 10:00 - 18:00</p>
+                            <p>周末照常报名</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <h3>📍 报名地点</h3>
+                        <div class="info-details">
+                            <p>一教xxx</p>
+                            <p>计算机协会</p>
+                            <p>xxxxx</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>👥 加入我们</h2>
+  <div class="qq-groups">
+    <div class="qq-group">
+        <h3>💬 新生咨询群</h3>
+        <div class="qq-number">123456789</div>
+        <p>扫码加入了解更多招新详情</p>
+        <div class="qrcode-container">
+            <img src="../photo/Test.jpg" alt="新生咨询群二维码" class="qrcode-image" data-fullsrc="../photo/Test.jpg">
+        </div>
+        <p>验证信息: 计协招新</p>
+    </div>
+    <div class="qq-group">
+        <h3>🎓 正式成员群</h3>
+        <div class="qq-number">987654321</div>
+        <p>报名通过后加入</p>
+        <div class="qrcode-container">
+            <img src="../photo/Test.jpg" alt="正式成员群二维码" class="qrcode-image" data-fullsrc="../photo/Test.jpg">
+        </div>
+        <p>仅限正式成员</p>
+    </div>
+</div>
+        </section>
+
+        <section class="section">
+            <h2>📞 联系我们</h2>
+            <div class="contacts">
+                <div class="contact-president">
+                    <h3>👨‍💼 理事长</h3>
+                    <p><strong>xxx</strong></p>
+                    <div class="contact-info">
+                        <p>📱 电话: 138-0000-0000</p>
+                        <p>💬 QQ: 123456789</p>
+                        <p>📧 微信: zhangwei_jx</p>
+                    </div>
+                </div>
+                
+                <div class="responsible-container">
+                    <div class="contact-card">
+                        <h3>👩‍💼 负责人</h3>
+                        <p><strong>xxx</strong></p>
+                        <div class="contact-info">
+                            <p>📱 电话: 139-0000-0000</p>
+                            <p>💬 QQ: 987654321</p>
+                            <p>📧 微信: lina_jx</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <h3>👨‍💼 负责人</h3>
+                        <p><strong>xx</strong></p>
+                        <div class="contact-info">
+                            <p>📱 电话: 137-0000-0000</p>
+                            <p>💬 QQ: 111222333</p>
+                            <p>📧 微信: wangqiang_jx</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <h3>👩‍💼 负责人</h3>
+                        <p><strong>xxx</strong></p>
+                        <div class="contact-info">
+                            <p>📱 电话: 136-0000-0000</p>
+                            <p>💬 QQ: 444555666</p>
+                            <p>📧 微信: zhaomin_jx</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🏢 各部门介绍</h2>
+            <div class="departments">
+                <div class="department">
+                    <div class="department-header">
+                        <div class="department-icon tech">💻</div>
+                        <h3>技术部</h3>
+                    </div>
+                    <p>负责协会技术项目开发、技术分享、前沿技术研究等</p>
+                    <div class="contact-info">
+                        <p><strong>部长: xx</strong></p>
+                        <p>📱 138-1111-1111</p>
+                        <p>💬 QQ: 111111111</p>
+                        <p>📧 微信: wangqiang_tech</p>
+                    </div>
+                </div>
+                <div class="department">
+                    <div class="department-header">
+                        <div class="department-icon contest">🏆</div>
+                        <h3>竞赛部</h3>
+                    </div>
+                    <p>组织参与各类编程竞赛、算法比赛、蓝桥杯等赛事</p>
+                    <div class="contact-info">
+                        <p><strong>部长: xx</strong></p>
+                        <p>📱 138-2222-2222</p>
+                        <p>💬 QQ: 222222222</p>
+                        <p>📧 微信: zhaomin_contest</p>
+                    </div>
+                </div>
+                <div class="department">
+                    <div class="department-header">
+                        <div class="department-icon pr">📢</div>
+                        <h3>宣传部</h3>
+                    </div>
+                    <p>负责活动宣传、海报设计、新媒体运营、视频制作等</p>
+                    <div class="contact-info">
+                        <p><strong>部长: xx</strong></p>
+                        <p>📱 138-3333-3333</p>
+                        <p>💬 QQ: 333333333</p>
+                        <p>📧 微信: chenli_pr</p>
+                    </div>
+                </div>
+                <div class="department">
+                    <div class="department-header">
+                        <div class="department-icon finance">💰</div>
+                        <h3>财务部</h3>
+                    </div>
+                    <p>管理协会财务、预算规划、经费申请、赞助洽谈等</p>
+                    <div class="contact-info">
+                        <p><strong>部长: xx</strong></p>
+                        <p>📱 138-4444-4444</p>
+                        <p>💬 QQ: 444444444</p>
+                        <p>📧 微信: liuyang_finance</p>
+                    </div>
+                </div>
+                <div class="department">
+                    <div class="department-header">
+                        <div class="department-icon activity">🎉</div>
+                        <h3>活动部</h3>
+                    </div>
+                    <p>策划组织各类技术活动和娱乐活动、团建等</p>
+                    <div class="contact-info">
+                        <p><strong>部长: 孙婷</strong></p>
+                        <p>📱 138-5555-5555</p>
+                        <p>💬 QQ: 555555555</p>
+                        <p>📧 微信: sunting_activity</p>
+                    </div>
+                </div>
+                <div class="department">
+                    <div class="department-header">
+                        <div class="department-icon secretary">📋</div>
+                        <h3>秘书部</h3>
+                    </div>
+                    <p>负责文档管理、会议记录、人事管理、考核制度等</p>
+                    <div class="contact-info">
+                        <p><strong>部长: xxx</strong></p>
+                        <p>📱 138-6666-6666</p>
+                        <p>💬 QQ: 666666666</p>
+                        <p>📧 微信: zhoulie_secretary</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="closing">
+            <h2>🌟 期待你的加入!</h2>
+            <p>在这里，你将收获技术的成长、友谊的温暖和难忘的回忆</p>
+            <p>让我们一起创造属于计算机协会的精彩!</p>
+            <div class="emoji-row">🎓💻🚀</div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<!-- 页脚部分 -->
+<footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>计算机协会</h3>
+                <p>致力于提升学生计算机技术水平，培养创新人才。</p>
+            </div>
+            <div class="footer-column">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="Navigate.html">首页</a></li>
+                    <li><a href="../HTML/info.html">关于我们</a></li>
+                    <li><a href="#services">技术培训</a></li>
+                    <li><a href="../HTML/News.html">活动资讯</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>联系我们</h4>
+                <ul>
+                    <li>📍 地址：成都师范学院</li>
+                    <li>📞 电话：123-456-7890</li>
+                    <li>📧 邮箱：csca.edu.cn</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+        <h4>关注我们</h4>
+    <div class="social-links">
+        <a href="https://github.com/your-association" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" title="GitHub">
+        </a>
+        <a href="https://space.bilibili.com/your-bilibili" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/bilibili.svg" alt="Bilibili" title="Bilibili">
+        </a>
+        <a href="https://weibo.com/your-weibo" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/sinaweibo.svg" alt="Weibo" title="Weibo">
+        </a>
+    </div>
+</div> 
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 计算机协会. 保留所有权利.</p>
+        </div>
+</footer>
+    <script src="../js/info.js"></script>
+    </body>
+</html>

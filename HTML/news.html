@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动咨讯</title>
+    <link rel="stylesheet" href="../CSS/News.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+
+
+
+<!-- 顶部导航栏 -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <h2>计算机协会</h2>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="Navigate.html" class="nav-link">首页</a>
+            </li>
+            <li class="nav-item">
+                <a href="../DOC/DOC-HTML/Main.html" class="nav-link" target="_blank">本站使用手册</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://sr.mihoyo.com/cloud/#/" class="nav-link" target="_blank">技术培训</a>
+            </li>
+            <li class="nav-item">
+                <a href="../HTML/News.html" class="nav-link" target="_blank">活动资讯</a>
+            </li>
+            <li class="nav-item">
+                <a href="../HTML/info.html" class="nav-link" target="_blank">联系我们</a>
+            </li>
+        </ul>
+        <!-- 天气组件 -->
+        <div class="weather-widget" id="weatherWidget">
+            <div class="weather-info">
+                <span class="weather-main">
+                    <span class="weather-icon">☀️</span>
+                    <span class="weather-temp" id="weatherTemp">25°</span>
+                    <span class="weather-city" id="weatherCity">北京</span>
+                </span>
+                <span class="weather-tip" id="weatherTip">今日天气晴朗，适合户外活动</span>
+            </div>
+        </div>
+        <!-- 移动端菜单按钮 -->
+        <div class="nav-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+
+
+
+
+    <!-- 新闻详情主要内容 -->
+    <main class="news-detail-container">
+        <article class="news-detail">
+            <!-- 活动基本信息 -->
+            <header class="news-header">
+                <h1 class="news-title">2025年度编程马拉松大赛</h1>
+                <div class="news-meta">
+                    <span class="meta-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="meta-text">时间: 2025年9月15日 9:00 - 17:00</span>
+                    </span>
+                    <span class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="meta-text">地点: 计算机学院实验楼A301</span>
+                    </span>
+                    <span class="meta-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="meta-text">学分: 2学分</span>
+                    </span>
+                </div>
+            </header>
+
+            <!-- 活动大图 -->
+            <div class="news-image-container">
+                <img src="../photo/1.jpg.jpeg" 
+                     alt="编程马拉松大赛" 
+                     class="news-image">
+            </div>
+
+            <!-- 活动详细介绍 -->
+            <div class="news-content">
+                <h2>活动介绍</h2>
+                <p>为激发同学们的编程热情，提升实际开发能力，计算机协会特举办2025年度编程马拉松大赛。本次活动面向全校学生，旨在通过团队合作解决实际问题，锻炼同学们的编程思维和项目开发能力。</p>
+                
+                <h3>活动亮点</h3>
+                <ul>
+                    <li>48小时不间断编程挑战</li>
+                    <li>专业导师现场指导</li>
+                    <li>丰厚奖品和学分奖励</li>
+                    <li>与企业合作项目实战</li>
+                    <li>结识志同道合的伙伴</li>
+                </ul>
+                
+                <h3>参赛要求</h3>
+                <p>本次活动面向全校在校学生，专业不限。参赛者需具备基本的编程能力，熟悉至少一门编程语言（如Java、Python、C++等）。鼓励跨专业组队，每队3-5人。</p>
+                
+                <h3>报名方式</h3>
+                <p>请于9月10日前通过学校官网活动报名系统进行报名，或联系计算机协会办公室（实验楼B205）进行现场报名。报名时需提交团队成员信息和初步项目构想。</p>
+                
+                <h3>奖项设置</h3>
+                <div class="awards">
+                    <div class="award-item">
+                        <h4>一等奖（1组）</h4>
+                        <p>奖金3000元 + 证书 + 2学分</p>
+                    </div>
+                    <div class="award-item">
+                        <h4>二等奖（2组）</h4>
+                        <p>奖金2000元 + 证书 + 1.5学分</p>
+                    </div>
+                    <div class="award-item">
+                        <h4>三等奖（3组）</h4>
+                        <p>奖金1000元 + 证书 + 1学分</p>
+                    </div>
+                    <div class="award-item">
+                        <h4>优秀奖（若干）</h4>
+                        <p>精美纪念品 + 证书 + 0.5学分</p>
+                    </div>
+                </div>
+                
+                <div class="news-actions">
+                    <button class="btn btn-primary">立即报名</button>
+                    <button class="btn btn-secondary">分享活动</button>
+                </div>
+            </div>
+        </article>
+    </main>
+
+
+
+
+
+<!-- 页脚部分 -->
+<footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>计算机协会</h3>
+                <p>致力于提升学生计算机技术水平，培养创新人才。</p>
+            </div>
+            <div class="footer-column">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="Navigate.html">首页</a></li>
+                    <li><a href="../HTML/info.html">关于我们</a></li>
+                    <li><a href="#services">技术培训</a></li>
+                    <li><a href="../HTML/News.html">活动资讯</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>联系我们</h4>
+                <ul>
+                    <li>📍 地址：成都师范学院</li>
+                    <li>📞 电话：123-456-7890</li>
+                    <li>📧 邮箱：csca.edu.cn</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+        <h4>关注我们</h4>
+    <div class="social-links">
+        <a href="https://github.com/your-association" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" title="GitHub">
+        </a>
+        <a href="https://space.bilibili.com/your-bilibili" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/bilibili.svg" alt="Bilibili" title="Bilibili">
+        </a>
+        <a href="https://weibo.com/your-weibo" target="_blank" class="social-icon">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/sinaweibo.svg" alt="Weibo" title="Weibo">
+        </a>
+    </div>
+</div> 
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 计算机协会. 保留所有权利.</p>
+        </div>
+</footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="../js/News.js"></script>
+</body>
+</html>
